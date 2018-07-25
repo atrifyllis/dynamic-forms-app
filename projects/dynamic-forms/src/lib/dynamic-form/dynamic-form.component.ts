@@ -9,9 +9,9 @@ import {ValidationService} from '../validation/validation.service';
 import {debounceTime} from 'rxjs/operators';
 
 @Component({
-    selector: 'df-dynamic-form',
-    templateUrl: './dynamic-form.component.html',
-    styleUrls: ['./dynamic-form.component.css']
+  selector: 'df-dynamic-form',
+  templateUrl: './dynamic-form.component.html',
+  styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
 

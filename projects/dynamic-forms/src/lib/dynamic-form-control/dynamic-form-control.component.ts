@@ -1,7 +1,8 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {BaseControl, ControlType} from '../controls/base-control';
-import {FormError} from '../validation/form-error';
+import {ErrorTuple, FormError} from '../validation/form-error';
+import {ValidatorConfig} from '../validation/validator-config';
 
 @Component({
     selector: 'df-dynamic-form-control',
@@ -35,7 +36,7 @@ export class DynamicFormControlComponent implements OnInit {
         this.hostClasses = this.calculateHostClasses();
     }
 
-    isFieldRequired() {
+    isFieldRequired(): ValidatorConfig {
         return this.control.validators
             .find(validator => validator.errorKey === 'required');
     }
@@ -44,7 +45,7 @@ export class DynamicFormControlComponent implements OnInit {
      * Retrieves control errors filtering out 'required' error which is handled separately
      * @returns {ErrorTuple | undefined}
      */
-    hasErrors() {
+    hasErrors(): ErrorTuple {
         return this.controlErrors.errors
             .filter(error => error.errorKey !== 'required')
             .find(error => error.errorKey !== '');
