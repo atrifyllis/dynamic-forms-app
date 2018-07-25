@@ -18,9 +18,9 @@ export class DynamicFormService {
      * Handles FormControls, nested FormGroups and FormArrays.
      * Also adds the created FormGroup to its parent (if provided).
      *
-     * @param {GroupControl} groupControl
-     * @param {FormGroup | FormArray} parent
-     * @returns {FormGroup}
+     * @param groupControl
+     * @param parent
+     * @returns
      */
     toFormGroup(groupControl: GroupControl, parent?: FormGroup | FormArray): FormGroup {
         const newGroup: any = {};
@@ -46,8 +46,8 @@ export class DynamicFormService {
      * Uses both groupControls and unrenderedControls to create the FormGroup controls.
      * Handles FormControls, nested FormGroups and FormArrays.
      *
-     * @param {ArrayControl} arrayControl
-     * @returns {FormArray}
+     * @param arrayControl
+     * @returns
      */
     toFormArray(arrayControl: ArrayControl) {
         const formArray = new FormArray([], arrayControl.arrayValidators);

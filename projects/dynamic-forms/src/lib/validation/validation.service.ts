@@ -61,10 +61,10 @@ export class ValidationService {
     /**
      * TODO this method maybe incomplete
      *
-     * @param {FormGroup} form
-     * @param {any[]} formErrors
+     * @param form
+     * @param formErrors
      * @param validationMessages
-     * @returns {any[]}
+     * @returns
      */
     updateFormErrors(form: FormGroup, formErrors: FormError[], validationMessages: ValidationErrorMessage[]): FormError[] {
         formErrors.map(formError => formError.controlKey)

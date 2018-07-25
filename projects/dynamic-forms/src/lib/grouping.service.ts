@@ -12,9 +12,9 @@ export class GroupingService {
      * Groups controls in rows (for the desired number of elements per row) and also takes care to group separately
      * in case the control is a GROUP or ARRAY
      *
-     * @param {BaseControl[]} controls
-     * @param {number} controlsPerRow
-     * @returns {BaseControl[][]}
+     * @param controls
+     * @param controlsPerRow
+     * @returns
      */
     groupControls(groupControl: GroupControl): BaseControl[][] {
         return this.groupRecursive([], [], groupControl.groupControls, groupControl.controlsPerRow);

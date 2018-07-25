@@ -41,13 +41,11 @@ export class DynamicFormComponent implements OnInit {
 
     /**
      * The errors (if any) for the specific FormGroup.
-     * @type {any[]}
      */
     formErrors: FormError[] = [];
 
     /**
      * All the validation messages for each possible error for the specific FormGroup.
-     * @type {any[]}
      */
     validationMessages: ValidationErrorMessage[] = [];
 

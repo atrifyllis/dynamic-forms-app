@@ -43,7 +43,7 @@ export class DynamicFormControlComponent implements OnInit {
 
     /**
      * Retrieves control errors filtering out 'required' error which is handled separately
-     * @returns {ErrorTuple | undefined}
+     * @returns
      */
     hasErrors(): ErrorTuple {
         return this.controlErrors.errors
@@ -58,7 +58,7 @@ export class DynamicFormControlComponent implements OnInit {
 
     /**
      * Aggregates all error meesages for this control.
-     * @returns {string}
+     * @returns
      */
     getErrorMessages() {
         return this.controlErrors.errors
