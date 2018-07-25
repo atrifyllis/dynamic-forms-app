@@ -108,7 +108,7 @@ describe('DynamicFormComponent', () => {
         initComponent();
 
         const dynamicFormComponent: DebugElement = fixture.debugElement;
-        const dynamicFormControlElements: DebugElement[] = dynamicFormComponent.queryAll(By.css('dynamic-form-control'));
+        const dynamicFormControlElements: DebugElement[] = dynamicFormComponent.queryAll(By.css('df-dynamic-form-control'));
 
         expect(dynamicFormControlElements.length).toEqual(2);
         dynamicFormControlElements.map(control => control.properties).forEach(properties => {
