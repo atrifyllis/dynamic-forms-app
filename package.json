@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build_lib": "ng build --prod dynamic-forms",
-    "test_lib": "ng test dynamic-forms"
+    "test_lib": "ng test dynamic-forms",
+    "npm_pack": "cd dist/dynamic-forms && npm pack",
+    "package": "npm run build_lib && npm run npm_pack"
   },
   "private": true,
   "dependencies": {

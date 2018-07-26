@@ -56,6 +56,7 @@ export class ErrorMessagesComponent implements OnInit {
             return Object.keys(form.errors)
                 .map(keyError => this.createErrorMessage(form, keyError));
         }
+        return [];
     }
 
     private createErrorMessage(form: FormGroup, keyError): Message {
